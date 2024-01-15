@@ -3,15 +3,10 @@ class Solution {
         String answer = "";
         
         for(char tmp : my_string.toCharArray()){
-            if(Character.isLowerCase(tmp)){
-                char c = Character.toUpperCase(tmp);
-                answer += Character.toString(c);
-                
-            }
-            else{
-                char c = Character.toLowerCase(tmp);
-                answer += Character.toString(c);
-            }
+            if(Character.isLowerCase(tmp))
+                answer += Character.toUpperCase(tmp);
+            else
+                answer += Character.toLowerCase(tmp);
         }
         
         return answer;
