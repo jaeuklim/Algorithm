@@ -1,10 +1,10 @@
 class Solution {
     public String solution(String myString) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         
         for(char tmp : myString.toCharArray()){
-            answer += Character.toLowerCase(tmp);
+            answer.append(Character.toLowerCase(tmp));
         }
-        return answer;
+        return answer.toString();
     }
 }
