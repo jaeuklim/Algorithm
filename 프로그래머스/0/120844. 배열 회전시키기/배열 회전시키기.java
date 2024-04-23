@@ -4,17 +4,15 @@ class Solution {
         
         if(direction.equals("right")){
             answer[0] = numbers[numbers.length-1];
-            answer[answer.length-1] = numbers[numbers.length-2];
             
-            for(int i=1; i<numbers.length-1; i++)
-                answer[i]=numbers[i-1];
+            for(int i=0; i<numbers.length-1; i++)
+                answer[i+1]=numbers[i];
         }
         else{
-            answer[0] = numbers[1];
             answer[answer.length-1] = numbers[0];
             
-            for(int i=1; i<numbers.length-1; i++)
-                answer[i]=numbers[i+1];
+            for(int i=1; i<numbers.length; i++)
+                answer[i-1]=numbers[i];
         }
         return answer;
     }
