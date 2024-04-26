@@ -4,10 +4,8 @@ class Solution {
         String str = Integer.toString(num);
         
         for(int i=0; i<str.length(); i++){
-            if(str.charAt(i) == (char)(k+'0'))
+            if(str.charAt(i)-'0' == k)
                 return i+1;
-            else
-                System.out.print(str.charAt(i));
         }
         return answer;
     }
