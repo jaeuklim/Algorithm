@@ -1,7 +1,11 @@
 class Solution {
     public long solution(int n) {
         long answer = 0;
-        long [] pibo = new long[n+2];
+        
+        if(n == 1) 
+            return 1;
+        
+        long [] pibo = new long[n+1];
         pibo[0] = 0;
         pibo[1] = 1;
         pibo[2] = 2;
