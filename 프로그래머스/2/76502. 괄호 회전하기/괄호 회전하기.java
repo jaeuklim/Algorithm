@@ -3,11 +3,10 @@ import java.util.*;
 class Solution {
     public int solution(String s) {
         int answer = 0;
-        
+        Stack<Character> stack = new Stack<>();
         int x=0;
         
-        while(x<s.length()){
-            Stack<Character> stack = new Stack<>();
+        while(x<s.length()){           
             String tmp = "";
             
             for(int i=0; i<s.length(); i++)
@@ -28,17 +27,14 @@ class Solution {
                         stack.pop();
                     else if(stack.peek() == '[' && tmp.charAt(i) == ']')
                         stack.pop();
-                    
-                    
                 }        
-                
             }
             
             if(stack.isEmpty())
                 answer++;
             
-            // while(!stack.isEmpty())
-            //     stack.pop();
+            while(!stack.isEmpty())
+                stack.pop();
             
             x++;
         }
