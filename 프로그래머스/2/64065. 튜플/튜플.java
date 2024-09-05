@@ -16,9 +16,7 @@ class Solution {
         List<Integer> list = new ArrayList<>();
         
         for(int i : map.values())
-            list.add(i);
-        
-            
+            list.add(i);         
         
         Collections.sort(list, Collections.reverseOrder());
         
