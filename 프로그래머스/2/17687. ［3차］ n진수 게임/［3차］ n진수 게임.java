@@ -14,12 +14,9 @@ class Solution {
                 if(turn>m)
                     turn=1;
                 
-                if(turn==p){
-                    if(c >= 'a' && c <='f')
-                        c = Character.toUpperCase(c);
+                if(turn==p)
                     list.add(c);
-                }
-                
+
                 turn++;
             }
             
@@ -28,6 +25,8 @@ class Solution {
 
         for(int i=0; i<t; i++)
             answer+=list.get(i);
+        
+        answer = answer.toUpperCase();
             
         return answer;
     }
