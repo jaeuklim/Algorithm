@@ -12,7 +12,6 @@ class Solution {
         
         for(int i=0; i<msg.length(); i++){
             wc += msg.charAt(i);
-            // index = i;            
             
             if(list.contains(wc)){
                 lastwc += msg.charAt(i);
