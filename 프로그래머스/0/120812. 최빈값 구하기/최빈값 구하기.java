@@ -1,24 +1,24 @@
+import java.util.*;
+
 class Solution {
     public int solution(int[] array) {
         int answer = 0;
-        int[] check = new int[1000];
-        int maxbin = -1;
-        boolean exist = false;
+        int maxbin = 0;
+        int bindo = 0;
+        Map<Integer, Integer> map = new HashMap<>();
         
-        for(int i : array)
-            check[i]++;
-        
-        for(int i=0; i<check.length; i++){
-            if(maxbin<check[i]){
+        for(int i : array){
+            bindo = map.getOrDefault(i,0) +1;
+            
+            if(bindo>maxbin){
+                maxbin = bindo;
                 answer = i;
-                maxbin = check[i];
-                exist = false;
-            }else if(check[i]==maxbin)
-                exist = true;
+            }
+            else if(bindo==maxbin)
+                answer = -1;
+            
+            map.put(i, bindo);
         }
-        
-        if(exist)
-            return -1;
         
         return answer;
     }
