@@ -3,13 +3,10 @@ class Solution {
         int answer = 0;
         int cola = 0;
         
-        while(true){
+        while(n>=a){
             cola = n/a *b;
             answer += cola;            
             n = n%a + cola;
-            
-            if(n<a)
-                break;
         }
         
         return answer;
