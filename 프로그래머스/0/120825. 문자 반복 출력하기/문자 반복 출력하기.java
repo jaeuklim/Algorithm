@@ -4,6 +4,7 @@ class Solution {
         
         for(int i=0; i<my_string.length(); i++){
             char tmp = my_string.charAt(i);
+            
             for(int j=0; j<n; j++)
                 answer += tmp;
         }
