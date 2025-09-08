@@ -12,7 +12,7 @@ class Solution {
             if(list.contains(Character.toString(tmp)))
                 continue;
             else
-                answer+=Character.toString(tmp);                           
+                answer += Character.toString(tmp);                           
         }
         
         return answer;
