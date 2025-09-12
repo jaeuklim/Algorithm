@@ -5,7 +5,7 @@ class Solution {
         int j = 0;
         
         for(int k=0; k<num_list.length; k++){
-            if(num_list[k]%2== 0)
+            if(num_list[k]%2==0)
                 i++;
             else
                 j++;
