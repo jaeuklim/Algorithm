@@ -2,6 +2,8 @@ class Solution {
     public String solution(String rsp) {
         String answer = "";
         
+        // System.out.println(""aa" + answer + "\"");
+        
         for(char tmp : rsp.toCharArray()){
             if(tmp == '2')
                 answer += '0';
@@ -10,6 +12,9 @@ class Solution {
             else
                 answer += '2';                
         }
+        
         return answer;
+        
+        
     }
 }
